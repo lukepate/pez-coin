@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.3",
     "express": "^4.17.1",
     "hex-to-binary": "^1.0.1",
     "jest": "^23.6.0",
