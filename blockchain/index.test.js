@@ -1,6 +1,6 @@
 const Blockchain = require('../blockchain');
 const Block = require('./block');
-const CryptoHash = require('../util/crypto-hash');
+const { cryptoHash } = require('../util');
 
 describe('Blockchain', () => {
     let blockchaink, newChain, originalChain;
@@ -66,7 +66,7 @@ describe('Blockchain', () => {
                     const nonce = 0;
                     const data = [];
                     const difficulty = lastBlock.difficulty - 3;
-                    const hash = CryptoHash(timestamp, lastHash, difficulty, nonce, data);
+                    const hash = cryptoHash(timestamp, lastHash, difficulty, nonce, data);
                     const badBlock = new Block({ timestamp, lastHash, nonce, difficulty, data});
 
                     blockchain.chain.push(badBlock);
