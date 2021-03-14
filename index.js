@@ -187,7 +187,7 @@ if (isDevelopment) {
 let PEER_PORT;
 
 if (process.env.GENERATE_PEER_PORT === 'true') {
-  PEER_PORT = DEFAULT_PORT + Math.ceil(Math.random() * 100);
+  PEER_PORT = DEFAULT_PORT + Math.ceil(Math.random() * 1000);
 }
 
 const PORT = process.env.PORT || PEER_PORT || DEFAULT_PORT;
