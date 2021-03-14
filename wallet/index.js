@@ -7,7 +7,7 @@ class Wallet {
     this.balance = STARTING_BALANCE;
 
     this.keyPair = ec.genKeyPair();
-    consolelog(this.keyPair, '=====this.keyPair======this.keyPair')
+    console.log(this.keyPair, '=====this.keyPair======this.keyPair')
 
     this.publicKey = this.keyPair.getPublic().encode('hex');
   }
